@@ -1,5 +1,5 @@
 {% set name = "kedro-telemetry" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kedro-telemetry-{{ version }}.tar.gz
-  sha256: 465a02cc7dfb111fb07ba46cdbe5753eb9ff5c55bf9956f1beee76179139c45b
+  sha256: 5488f65c201a98b707c55e51f152af1cc7ff453fffadb897ad210c093233d677
 
 build:
   noarch: python
