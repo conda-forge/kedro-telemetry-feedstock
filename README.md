@@ -7,7 +7,7 @@ Home: https://github.com/kedro-org/kedro-plugins/tree/main/kedro-telemetry
 
 Package license: Apache-2.0
 
-Summary: To find out how Kedro's features are used, the Kedro team have created an opt-in Kedro-Telemetry plugin to gather anonymised (before being sent across the internet) and aggregated usage analytics.
+Summary: Kedro-Telemetry is a plugin that gathers anonymised and aggregated usage analytics to help the Kedro team understand how Kedro is used and prioritise improvements to the product accordingly.
 
 Development: https://github.com/kedro-org/kedro-plugins/tree/main/kedro-telemetry
 
@@ -145,5 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@rxm7706](https://github.com/rxm7706/)
 * [@zaigner](https://github.com/zaigner/)
 
