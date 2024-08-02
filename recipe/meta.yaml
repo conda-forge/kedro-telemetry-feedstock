@@ -1,28 +1,29 @@
 {% set name = "kedro-telemetry" %}
-{% set version = "0.3.2" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kedro-telemetry-{{ version }}.tar.gz
-  sha256: 5488f65c201a98b707c55e51f152af1cc7ff453fffadb897ad210c093233d677
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kedro_telemetry-{{ version }}.tar.gz
+  sha256: 65676ab451a5a3a6d45645e96d744c49c4877f82df310b31b506db287195bce1
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - setuptools
     - pip
   run:
-    - python >=3.7
-    - kedro >=0.18.0,<0.19.0
+    - python >=3.8
+    - kedro >=0.18.0
     - requests >=2.20,<3.0
+    - appdirs >=1.4.4
 
 test:
   imports:
@@ -33,7 +34,7 @@ test:
     - pip
 
 about:
-  summary: To find out how Kedro's features are used, the Kedro team have created an opt-in Kedro-Telemetry plugin to gather anonymised (before being sent across the internet) and aggregated usage analytics.
+  summary: Kedro-Telemetry is a plugin that gathers anonymised and aggregated usage analytics to help the Kedro team understand how Kedro is used and prioritise improvements to the product accordingly.
   home: https://github.com/kedro-org/kedro-plugins/tree/main/kedro-telemetry
   license: Apache-2.0
   license_file: LICENSE.md
@@ -41,4 +42,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - rxm7706
     - zaigner
