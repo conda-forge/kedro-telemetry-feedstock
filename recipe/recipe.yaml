@@ -34,14 +34,8 @@ tests:
   - python:
       imports:
         - kedro_telemetry
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-
-    python:
       pip_check: true
+      python_version: ${{ python_min }}.*
 about:
   summary: Kedro-Telemetry is a plugin that gathers anonymised and aggregated usage analytics to help the Kedro team understand how Kedro is used and prioritise improvements to the product accordingly.
   license: Apache-2.0
