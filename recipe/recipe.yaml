@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: kedro-telemetry
-  version: 0.6.3
+  version: "0.6.3"
 
 package:
   name: ${{ name|lower }}
@@ -23,7 +24,7 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     - kedro >=0.18.0
     - requests >=2.20,<3.0
     - appdirs >=1.4.4
@@ -38,9 +39,9 @@ tests:
       run:
         - pip
         - python ${{ python_min }}.*
-    script:
-      - pip check
 
+    python:
+      pip_check: true
 about:
   summary: Kedro-Telemetry is a plugin that gathers anonymised and aggregated usage analytics to help the Kedro team understand how Kedro is used and prioritise improvements to the product accordingly.
   license: Apache-2.0
